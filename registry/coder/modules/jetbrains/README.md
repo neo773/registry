@@ -131,13 +131,13 @@ module "jetbrains" {
   version  = "1.0.0"
   agent_id = coder_agent.example.id
   folder   = "/home/coder/project"
-  
+
   # Pre-install plugins by their marketplace IDs
   plugins = [
-    "tanvd.grazi",           # Grazie Lite (grammar checking)
-    "com.github.copilot",    # GitHub Copilot
+    "tanvd.grazi",                     # Grazie Lite (grammar checking)
+    "com.github.copilot",              # GitHub Copilot
     "org.jetbrains.plugins.terraform", # Terraform support
-    "com.intellij.plugins.watcher"      # File Watchers
+    "com.intellij.plugins.watcher"     # File Watchers
   ]
 }
 ```
@@ -151,17 +151,17 @@ module "jetbrains" {
   version  = "1.0.0"
   agent_id = coder_agent.example.id
   folder   = "/home/coder/project"
-  
+
   # IDE selection
   default = ["IU", "PY"]
-  
+
   # Plugin pre-installation
   plugins = [
     "tanvd.grazi",
     "com.github.copilot",
     "org.jetbrains.plugins.terraform"
   ]
-  
+
   # Version configuration
   major_version = "2025.1"
   channel       = "release"
